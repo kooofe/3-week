@@ -19,4 +19,4 @@ def function(m, n):
     print(-div[-1][1], 'consist', div[-1][0], 'divisors')
 
 
-function(394441, 394505)
+function(2, 4682192)
