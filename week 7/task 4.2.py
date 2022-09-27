@@ -1,15 +1,15 @@
-import math
-
-
-def isInside(x, y, radius):
-    if math.pow(x, 2) + math.pow(y, 2) <= pow(radius, 2):
+def isInside(x, y, rad, p1, p2):
+    if ((p1 - x) * (p1 - x) +
+            (p2 - y) * (p2 - y) <= rad * rad):
         return True
-
-
-R = input("plz input R of circle: ")
-wannaExit = False
-while(wannaExit!=True):
-    x, y = list(map(int, input("enter x,y of point").split()))
-    wannaExit = bool(input("wanna quit?"))
-    isInside(x, y, R)
-
+    else:
+        return False
+p1 = 11
+p2 = 12
+x = 0
+y = 1
+rad = 2
+if isInside(x, y, rad, p1, p2):
+    print("Inside")
+else:
+    print("Outside")
